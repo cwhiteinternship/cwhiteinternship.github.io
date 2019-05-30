@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moon Rotate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:italic,100,800" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+<!--Headline--> 
+<h1>SALTY COW SOFT SERVE</h1>
+<!--End Headline--> 
+<!--Subhead--> 
+<div class="gallery">For this project I was to create a business card and buy one get one free card for Salty Cow Soft Serve ice cream business. Although the client wanted to incorporate cow print on the front of her cards, we decided it would be over powering and instead placed it on the back. I gave two different examples of the front of the cards with different placings to the show the client how the different options looked and how appealing they were to the eye without the cow print. I was able to incorporate the cow print on the back of the cards but showed examples without it as well. I made the back of the business cards and buy one get one cards match in design. The owner provided specific information of what she wanted on the cards along with the color palette to use. On the buy one get one card, I included “expires with” question marks on the bottom left hand corner because we haven’t been provided the expiration date.  </div>
+<!--End Subhead-->        
+<br>
+<!--Slideshow--> 
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="assets/saltycow.jpg" style="width:100%">
+</div>
+
+        
+</div>
+<!--End Slideshow--> 
+<br>
+<!--Slideshow Dots under picture-->         
+<div style="text-align:center">
+  <span class="dot"></span> 
+</div>
+<!--End Slideshow Dots under picture-->     
+<!--Slideshow Dots timing-->     
+<script>
+  var slideIndex = 0;
+  showSlides();
+  function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+</script>
+<!--End Slideshow Dots timing--> 
+</body>
+</html>
