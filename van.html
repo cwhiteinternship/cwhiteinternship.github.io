@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moon Rotate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:italic,100,800" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+<!--Headline-->  
+<h1>MOSQUITO SQUAD</h1>
+<!--End Headline-->  
+<!--Subhead-->  
+<div class="gallery">A project I worked on at the bay consisted of putting the Mosquito Squad, who are out of Wellfleet, vinyl on the back of their van. This was a job I did by myself. This vinyl was already weeded and ready to be put on the van. I cleaned off the window, and then measured so the vinyl would be placed in the center of the window. Then I took the backing off and squeegeed it down. Next, I took the front adhesive off and made sure there were no bubbles. Because the decal was positioned in the middle of an opening door, I had to cut where the division was. Now that the project was complete, I can’t wait to see the van driving around. </div>
+<!--End Subhead-->      
+<br>
+<!--Slideshow-->  
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="assets/vanlettering.jpg" style="width:100%">
+</div>
+        
+</div>
+<!--End Slideshow-->  
+<br>
+<!--Slideshow Dots under picture-->          
+<div style="text-align:center">
+  <span class="dot"></span> 
+</div>
+<!--End Slideshow Dots under picture-->    
+<!--Slideshow Dots timing-->      
+<script>
+  var slideIndex = 0;
+  showSlides();
+  function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+</script>
+<!--End Slideshow Dots timing--> 
+</body>
+</html>
